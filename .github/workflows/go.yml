@@ -33,7 +33,7 @@ jobs:
         env:
           CGO_ENABLED: 0
           GO111MODULE: on
-          MINIO_KMS_SECRET_KEY: "my-minio-key:OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw="
+          MINIO_KMS_SECRET_KEY: "my-minio-key:vc9AIzRusPUL2AFHGELJV36cxnKR4uZyXzC55yS0g5Q="
           MINIO_KMS_AUTO_ENCRYPTION: on
         run: |
           sudo sysctl net.ipv6.conf.all.disable_ipv6=0
