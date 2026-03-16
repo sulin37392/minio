@@ -9,8 +9,6 @@ builds:
     binary: minio
     goos:
       - linux
-      - darwin
-      - windows
     goarch:
       - amd64
       - arm64
@@ -37,8 +35,8 @@ dockers:
     dockerfile: Dockerfile.goreleaser
     use: buildx
     image_templates:
-      - "pgsty/minio:{{ .Tag }}-amd64"
-      - "pgsty/minio:latest-amd64"
+      - "sulin37392/minio:{{ .Tag }}-amd64"
+      - "sulin37392/minio:latest-amd64"
     build_flag_templates:
       - "--platform=linux/amd64"
       - "--label=org.opencontainers.image.version={{ .Tag }}"
@@ -57,8 +55,8 @@ dockers:
     dockerfile: Dockerfile.goreleaser
     use: buildx
     image_templates:
-      - "pgsty/minio:{{ .Tag }}-arm64"
-      - "pgsty/minio:latest-arm64"
+      - "sulin37392/minio:{{ .Tag }}-arm64"
+      - "sulin37392/minio:latest-arm64"
     build_flag_templates:
       - "--platform=linux/arm64"
       - "--label=org.opencontainers.image.version={{ .Tag }}"
@@ -70,14 +68,14 @@ dockers:
       - CREDITS
 
 docker_manifests:
-  - name_template: "pgsty/minio:{{ .Tag }}"
+  - name_template: "sulin37392/minio:{{ .Tag }}"
     image_templates:
-      - "pgsty/minio:{{ .Tag }}-amd64"
-      - "pgsty/minio:{{ .Tag }}-arm64"
-  - name_template: "pgsty/minio:latest"
+      - "sulin37392/minio:{{ .Tag }}-amd64"
+      - "sulin37392/minio:{{ .Tag }}-arm64"
+  - name_template: "sulin37392/minio:latest"
     image_templates:
-      - "pgsty/minio:latest-amd64"
-      - "pgsty/minio:latest-arm64"
+      - "sulin37392/minio:latest-amd64"
+      - "sulin37392/minio:latest-arm64"
 
 checksum:
   name_template: "minio_{{ .Env.PKG_VERSION }}_checksums.txt"
@@ -85,7 +83,7 @@ checksum:
 
 release:
   github:
-    owner: pgsty
+    owner: sulin37392
     name: minio
   draft: false
   prerelease: false

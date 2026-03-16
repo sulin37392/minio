@@ -21,13 +21,13 @@ First generate a 256 bit random key via:
 
 ```sh
 $ cat /dev/urandom | head -c 32 | base64 -
-OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw=
+vc9AIzRusPUL2AFHGELJV36cxnKR4uZyXzC55yS0g5Q=
 ```
 
 Now, you can set `MINIO_KMS_SECRET_KEY` like this:
 
 ```sh
-export MINIO_KMS_SECRET_KEY=my-minio-key:OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw=
+export MINIO_KMS_SECRET_KEY=my-minio-key:vc9AIzRusPUL2AFHGELJV36cxnKR4uZyXzC55yS0g5Q=
 ```
 
 > You can choose an arbitrary name for the key - instead of `my-minio-key`.
@@ -40,7 +40,7 @@ deployment. You just need to import the generated key into KES - for example via
 the KES CLI once you have successfully setup KES:
 
 ```sh
-kes key create my-minio-key OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw=
+kes key create my-minio-key vc9AIzRusPUL2AFHGELJV36cxnKR4uZyXzC55yS0g5Q=
 ```
 
 - For instructions on setting up KES, see the [KES Getting Started guide](https://github.com/minio/kes/wiki/Getting-Started)

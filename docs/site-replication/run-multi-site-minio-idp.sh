@@ -37,7 +37,7 @@ export MINIO_ROOT_USER="minio"
 export MINIO_ROOT_PASSWORD="minio123"
 export MINIO_KMS_AUTO_ENCRYPTION=off
 export MINIO_PROMETHEUS_AUTH_TYPE=public
-export MINIO_KMS_SECRET_KEY=my-minio-key:OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw=
+export MINIO_KMS_SECRET_KEY=my-minio-key:vc9AIzRusPUL2AFHGELJV36cxnKR4uZyXzC55yS0g5Q=
 
 if [ ! -f ./mc ]; then
 	wget -O mc https://dl.minio.io/client/mc/release/linux-amd64/mc &&

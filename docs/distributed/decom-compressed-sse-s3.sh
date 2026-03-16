@@ -18,7 +18,7 @@ export MINIO_COMPRESSION_EXTENSIONS=".go"
 export MINIO_COMPRESSION_MIME_TYPES="application/*"
 export MINIO_COMPRESSION_ALLOW_ENCRYPTION="on"
 export MINIO_KMS_AUTO_ENCRYPTION=on
-export MINIO_KMS_SECRET_KEY=my-minio-key:OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw=
+export MINIO_KMS_SECRET_KEY=my-minio-key:vc9AIzRusPUL2AFHGELJV36cxnKR4uZyXzC55yS0g5Q=
 export MC_HOST_myminio="http://minioadmin:minioadmin@localhost:9000/"
 
 (minio server http://localhost:9000/tmp/xl/{1...10}/disk{0...1} 2>&1 >/dev/null) &

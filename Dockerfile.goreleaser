@@ -7,8 +7,8 @@ RUN dnf -y install ca-certificates && \
 
 FROM registry.access.redhat.com/ubi9/ubi-micro:latest
 
-LABEL maintainer="pgsty <https://github.com/pgsty/minio>" \
-      description="MinIO community fork, build by pgsty"
+LABEL maintainer="sulin37392 <https://github.com/sulin37392/minio>" \
+      description="MinIO community fork, build by sulin37392"
 
 ENV MINIO_ACCESS_KEY_FILE=access_key \
     MINIO_SECRET_KEY_FILE=secret_key \
