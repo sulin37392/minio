@@ -25,6 +25,11 @@ archives:
     ids:
       - minio
     name_template: "minio_{{ .Env.PKG_VERSION }}_{{ .Os }}_{{ .Arch }}"
+  - id: minio-binary
+    ids:
+      - minio
+    format: binary
+    name_template: "minio_{{ .Env.PKG_VERSION }}_{{ .Os }}_{{ .Arch }}"
 
 dockers:
   - id: minio-amd64
